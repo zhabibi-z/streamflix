@@ -18,8 +18,7 @@ const Player = () => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTVmMjJkZDk5NTRmYzFhNDEyOWIwZjA1MGFiNTE5YyIsIm5iZiI6MTczNjA2NTAyNC44NjcsInN1YiI6IjY3N2E0MDAwMjVlMGU5MWM1Nzc0ZTBkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uXK1Pd76qqKJ2Y_W2qMMjIJ0ZjJZENYttox0qIIFGH4"
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`
     }
   };
 
@@ -39,7 +38,7 @@ const Player = () => {
         src={back_arrow_icon}
         alt=""
         onClick={()=>{
-          navigate(-2)
+          navigate(-1)
         }}
       />
       <iframe
